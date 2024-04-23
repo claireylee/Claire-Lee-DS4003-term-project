@@ -274,6 +274,12 @@ def display_additional_info(selected_chart):
         'love': ['pink', 'grey']  # Love: Purple, Other: Dark grey
     }
 
+    title_texts = {
+        'pos': "Positive Words in Song Titles",
+        'neg': "Negative Words in Song Titles",
+        'love': "Mentions of Love in Song Titles"
+    }
+
     if selected_chart == 'pos':
         fig.add_trace(go.Pie(labels=['Positive', 'Other'], values=[pos_count, total_songs - pos_count],
                              hole=.4, marker_colors=colors['pos'], textinfo='label+percent',
@@ -293,8 +299,13 @@ def display_additional_info(selected_chart):
     fig.update_layout(**layout)
     fig.update_traces(textposition='inside', textfont_size=16)
 
+    chart_title = html.Div([
+        html.H3(title_texts[selected_chart], style={'margin-right': '20px'}),
+        dcc.Graph(figure=fig)
+    ], style={'display': 'flex', 'align-items': 'center'})
+
     return html.Div([
-        dcc.Graph(figure=fig),
+        chart_title,
         html.P(description, style={
             'background-color': 'black',
             'color': 'white',
