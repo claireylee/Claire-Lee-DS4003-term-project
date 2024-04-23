@@ -56,6 +56,8 @@ app.layout = html.Div([
         html.P("Click the buttons below to view different analyses of top songs from 1901-2014", style={'color': 'white'}),
         html.Button("Comparison of Popular Media Metrics", id='btn-overview', n_clicks=0, style={'margin': '10px', 'width': '50%', 'alignItems': 'center'}),
         html.Button("Analysis of Song Titles", id='btn-additional', n_clicks=0, style={'margin': '10px', 'width': '50%', 'alignItems':'center'}),
+        html.A(html.Button('Visit GitHub', style={'margin': '10px', 'width': '50%', 'backgroundColor': 'black', 'color': 'white', 'alignItems': 'center'}),
+               href = 'https://github.com/claireylee/Claire-Lee-DS4003-term-project', target = '_blank'),
         html.Div([
             dcc.Graph(figure=generate_table(data), style={'width': '60%', 'height': '400px'}),  # Adjusted width for the graph
             html.Div([
