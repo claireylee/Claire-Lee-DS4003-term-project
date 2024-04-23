@@ -44,7 +44,7 @@ def generate_table(dataframe, max_rows=4850):
     )],
     layout=go.Layout(
         width=800,  # Adjust width 
-        height=650,  # Adjust height
+        height=600,  # Adjust height
         paper_bgcolor='rgba(0,0,0,0)',  # Transparent background behind the chart
         plot_bgcolor='rgba(0,0,0,0)' 
     ))
