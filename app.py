@@ -209,8 +209,8 @@ def create_combined_graph():
     html.Div("This graph shows the amount of sales, streams, downloads, and radio plays over the years. Over the years, we can conclude that overall sales are continuously popular. Click the play button to see the animation on how these metrics grew over the years.", style={
         'padding': '10px',
         'marginTop': '20px',
-        'width': '50%',
-        'font-size': '14px',
+        'width': '70%',
+        'font-size': '18px',
         'color': 'black',
         'background-color': 'lavender',  # Keeping this grey or another color for contrast
         'textAlign': 'center',
